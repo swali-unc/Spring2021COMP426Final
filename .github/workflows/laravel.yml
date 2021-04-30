@@ -21,6 +21,6 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         use_insecure_cipher: true
         script: |
-          cd /public_html/digitalhaze/comp426
+          cd public_html/digitalhaze/comp426
           git checkout -f
           git pull
