@@ -58,6 +58,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         username: ${{ secrets.SSH_USERNAME }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           cd /public_html/digitalhaze/comp426
           git checkout -f
