@@ -21,6 +21,6 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         use_insecure_cipher: true
         script: |
-          cd public_html/digitalhaze/comp426
+          cd /home2/fightiq0/public_html/digitalhaze/comp426/Spring2021COMP426Final
           git checkout -f
           git pull
