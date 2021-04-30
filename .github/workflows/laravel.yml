@@ -19,7 +19,6 @@ jobs:
         port: 22
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        use_insecure_cipher: true
         script: |
           cd /public_html/digitalhaze/comp426
           git checkout -f
