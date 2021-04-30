@@ -14,14 +14,11 @@ jobs:
       uses: actions/checkout@v2
     - name: Deployment
       uses: appleboy/ssh-action@master
-      env:
-      	APPTOKEN: ${{ github.repository_owner }}
       with:
         host: ${{ secrets.SSH_HOST }}
         port: 22
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        envs: APPTOKEN
         use_insecure_cipher: true
         script: |
           cd /public_html/digitalhaze/comp426
