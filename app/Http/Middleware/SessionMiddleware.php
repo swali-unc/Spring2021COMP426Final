@@ -22,6 +22,6 @@ class SessionMiddleware {
 	}
 	
 	public function __construct() {
-		$auth = SessionAuth::Instance();
+		$this->auth = SessionAuth::Instance();
 	}
 }
