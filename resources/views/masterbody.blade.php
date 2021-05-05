@@ -2,6 +2,11 @@
 
 @push('Stylesheets')
 <link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="/css/jquery-ui.min.css" rel='stylesheet' type='text/css'>
+@endpush
+
+@push('Headers')
+<script src="/js/jquery-ui.min.js"></script>
 @endpush
 
 @section('Body')
@@ -22,5 +27,11 @@
 		@endif
 	</tr>
 </table>
+<table id="maintable">
+	<tr>
+	<td>
 @yield('PageContents')
+	</td>
+	</tr>
+</table>
 @endsection
