@@ -13,3 +13,9 @@
 #webbanner {
 	font-size: large;
 }
+
+#topbanner {
+	border-radius: 0 0 5px 5px;
+	border: groove 1em red;
+	background-color: #FFC0C0;
+}

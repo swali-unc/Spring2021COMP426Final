@@ -5,20 +5,20 @@
 @endpush
 
 @section('Body')
-<table class="maxwidth center centertext">
+<table id="topbanner" class="maxwidth center centertext">
 	<tr>
-		<td>A.I. Tic-Tac-Toe</td>
+		<td id="webbanner" class="centertext center maxwidth">A.I. Tic-Tac-Toe</td>
 	</tr>
 </table>
 
-<table class="maxwidth">
+<table class="maxwidth center centertext">
 	<tr>
-		<td><a href="/">Home</a></td>
+		<td class="center centertext"><a href="/">Home</a></td>
 		@if($IsLoggedIn)
-		<td><a href="/logout">Logout</a></td>
+		<td class="center centertext"><a href="/logout">Logout</a></td>
 		@else
-		<td><a href="/login">Login</a></td>
-		<td><a href="/register">Register</a></td>
+		<td class="center centertext"><a href="/login">Login</a></td>
+		<td class="center centertext"><a href="/register">Register</a></td>
 		@endif
 	</tr>
 </table>
