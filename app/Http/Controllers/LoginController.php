@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Library\SessionAuth;
 
-class LoginController {
+use App\Http\Controllers\Controller;
+
+class LoginController extends Controller {
 	private $auth;
 	
 	public function LoginPage( Request $request ) {
