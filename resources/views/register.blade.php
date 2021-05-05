@@ -4,6 +4,9 @@
 
 @section('PageContents')
 <fieldset class="fsheader">
+	Create your user account here.<br />
+	Note usernames must be at least 3 letters long, and alphanumeric.<br />
+	
 	{{ Form::open(['url'=>'/register','method'=>'post']) }}
 	{{ Form::token() }}
 	<table>
