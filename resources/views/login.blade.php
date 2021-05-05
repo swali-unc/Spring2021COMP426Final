@@ -4,6 +4,8 @@
 
 @section('PageContents')
 <fieldset class="fsheader">
+	Login here.<br />
+	
 	{{ Form::open(['url'=>'/login','method'=>'post']) }}
 	{{ Form::token() }}
 	<table>
