@@ -1,3 +1,11 @@
 .maxwidth {
 	width: 100%;
 }
+
+.center {
+	margin: auto;
+}
+
+.centertext {
+	text-align: center;
+}
