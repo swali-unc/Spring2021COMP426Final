@@ -13,6 +13,7 @@ class SessionAuth {
 	private $logintoken = null;
 	private $isLoggedIn = false;
 	private $tokenlength = 20;
+	private $sessionid = null;
 	
 	public function CheckCredentials( $username, $password ) {
 		$row = $this->GetUserRow( $username );
@@ -34,7 +35,7 @@ class SessionAuth {
 	public function CheckSession( $tokenid ) {
 		$rows = DB::table('users')
 			->join('sessions', 'users.id', '=', 'sessions.userid')
-			->select('users.*')
+			->select('users.*, sessions.id as sessionid')
 			->where('sessions.tokenid',$tokenid)
 			->limit(1)
 			->get();
@@ -45,6 +46,7 @@ class SessionAuth {
 		$this->logintoken = $tokenid;
 		$this->isLoggedIn = true;
 		$this->userid = $row->id;
+		$this->sessionid = $row->sessionid;
 		
 		return true;
 	}
@@ -62,6 +64,15 @@ class SessionAuth {
 		DB::table('sessions')->insert(['tokenid' => $token, 'userid' => $userid]);
 		
 		return [$this->cookiename,$token];
+	}
+	
+	public function CloseSession() {
+		if( $this->sessionid === null ) return false;
+		
+		DB::table('sessions')
+			->where('id',$this->sessionid)
+			->limit(1)
+			->delete();
 	}
 	
 	public function CreateUser( $username, $password ) {
