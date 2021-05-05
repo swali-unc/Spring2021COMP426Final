@@ -15,7 +15,13 @@
 		<td id="webbanner" class="centertext center maxwidth">A.I. Tic-Tac-Toe</td>
 	</tr>
 </table>
-
+@if(!empty($errormsg))
+<table class="maxwidth center centertext">
+	<tr>
+		<td class="centertext center maxwidth alert">{{ $errormsg }}</td>
+	</tr>
+</table>
+@endif
 <table class="maxwidth center centertext">
 	<tr>
 		<td class="center centertext"><a href="/">Home</a></td>
