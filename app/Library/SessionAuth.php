@@ -8,6 +8,7 @@ use App\Library\Utilities;
 
 class SessionAuth {
 	private $cookiename = 'LoginToken';
+	private $userid = null;
 	private $username = null;
 	private $logintoken = null;
 	private $isLoggedIn = false;
@@ -15,10 +16,10 @@ class SessionAuth {
 	
 	public function CheckCredentials( $username, $password ) {
 		$row = $this->GetUserRow( $username );
-		if( $row === false ) return 'Username not found';
-		if( !password_verify( $password, $row->passhash ) ) return 'Invalid password';
+		if( $row === false ) return [false,'Username not found'];
+		if( !password_verify( $password, $row->passhash ) ) return [false,'Invalid password'];
 		
-		return true;
+		return [true,$row->id];
 	}
 	
 	public function CheckSessionWithRequest( Request $request ) {
@@ -40,9 +41,10 @@ class SessionAuth {
 		if( count( $rows ) === 0 ) return false;
 		
 		$row = $rows[0];
-		$this->username = $row['username'];
+		$this->username = $row->username;
 		$this->logintoken = $tokenid;
 		$this->isLoggedIn = true;
+		$this->userid = $row->id;
 		
 		return true;
 	}
@@ -59,7 +61,7 @@ class SessionAuth {
 		
 		DB::table('sessions')->insert(['tokenid' => $token, 'userid' => $userid]);
 		
-		return $token;
+		return [$this->cookiename,$token];
 	}
 	
 	public function CreateUser( $username, $password ) {
@@ -83,6 +85,10 @@ class SessionAuth {
 	
 	public function GetUsername() {
 		return $this->username;
+	}
+	
+	public function GetUserid() {
+		return $this->userid;
 	}
 	
 	private function GetUserRow( $username ) {

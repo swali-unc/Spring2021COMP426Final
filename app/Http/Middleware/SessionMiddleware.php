@@ -14,6 +14,7 @@ class SessionMiddleware {
 		if( $this->auth->CheckSessionWithRequest( $request ) ) {
 			View::share('IsLoggedIn', true );
 			View::share('username', $this->auth->GetUsername() );
+			View::share('userid', $this->auth->GetUserid() );
 		} else {
 			View::share('IsLoggedIn', false );
 		}
