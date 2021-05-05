@@ -86,7 +86,7 @@ class SessionAuth {
 		return true;
 	}
 	
-	private function RemoveSessionCookie() {
+	public function RemoveSessionCookie() {
 		\Cookie::queue( \Cookie::forget( $this->cookiename ) );
 	}
 	
