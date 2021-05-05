@@ -14,6 +14,18 @@ class LoginController {
 		return view('login');
 	}
 	
+	public function RegisterPage( Request $request ) {
+		if( $this->auth->IsLoggedIn() )
+			return redirect('/');
+		return view('register');
+	}
+	
+	public function LogoutPage( Request $request ) {
+		$this->auth->CloseSession();
+		$this->auth->RemoveSessionCookie();
+		return redirect('/');
+	}
+	
 	public function AttemptLogin( Request $request ) {
 		$this->validate( $request, [
 			'username' => 'required',
