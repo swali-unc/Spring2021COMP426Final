@@ -35,7 +35,7 @@ class SessionAuth {
 	public function CheckSession( $tokenid ) {
 		$rows = DB::table('users')
 			->join('sessions', 'users.id', '=', 'sessions.userid')
-			->select('users.*, sessions.id as sessionid')
+			->select('users.*', 'sessions.id as sessionid')
 			->where('sessions.tokenid',$tokenid)
 			->limit(1)
 			->get();
