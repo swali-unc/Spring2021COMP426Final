@@ -12,6 +12,7 @@
         <!--  Additional Headers -->
 		<script src="{{ URL::asset('/js/jquery-3.6.0.min.js') }}"></script>
 		<script src="{{ URL::asset('/js/app.js') }}"></script>
+		<script src="{{ URL::asset('/js/main.js') }}"></script>
         @stack('Headers')
         
         <!--  OnLoad -->
