@@ -11,12 +11,11 @@
 }
 
 #webbanner {
-	font-size: large;
+	font-size: 32px;
 }
 
 #topbanner {
 	border-radius: 0 0 2em 2em;
-	border: groove 1em red;
 	background-color: #FFC0C0;
 }
 
