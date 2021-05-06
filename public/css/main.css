@@ -2,6 +2,14 @@
 	width: 100%;
 }
 
+.width95 {
+	width: 95%;
+}
+
+.width80 {
+	width: 80%;
+}
+
 .center {
 	margin: auto;
 }
