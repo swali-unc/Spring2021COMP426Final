@@ -34,7 +34,7 @@
 		@endif
 		<td class="center centertext"><a href="/score">High Scores</a></td>
 		@if($IsLoggedIn)
-		<td class="center centertext">Logged in as: {{ $username }}
+		<td class="center centertext">Welcome {{ $username }}</td>
 		@endif
 	</tr>
 </table>
