@@ -72,7 +72,7 @@ class Fighters {
 		
 		$this->jack = [
 			'id' => 5,
-			'name' => 'Jack of Spaces',
+			'name' => 'Jack of Spades',
 			'logo' => '/img/jackcomic.png',
 			'taunts' => [
 				'Here is a neat card trick: your defeat',
