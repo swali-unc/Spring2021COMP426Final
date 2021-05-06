@@ -1,6 +1,6 @@
 @extends('masterbody')
 
-@section('PageTitle','Home Page')
+@section('PageTitle','Choose your fight')
 
 @section('PageContents')
 <div class="container">
