@@ -18,7 +18,7 @@ class ScoreSystem {
 	public function GetUserScores( $userid ) {
 		return DB::table('scores')
 			->where('userid',$userid)
-			->orderBy('createdate')
+			->orderBy('createdate','desc')
 			->get();
 	}
 	
@@ -27,7 +27,7 @@ class ScoreSystem {
 			->join('users','users.id','=','scores.userid')
 			->select('users.id as userid','users.username',DB::raw('SUM(scores.score) as totalscore'))
 			->groupBy('userid')
-			->orderBy('totalscore')
+			->orderBy('totalscore','desc')
 			->get();
 	}
 	
@@ -37,7 +37,7 @@ class ScoreSystem {
 			->where('scores.fightid',$fightid)
 			->select('users.id as userid','users.username',DB::raw('SUM(scores.score) as totalscore'))
 			->groupBy('userid')
-			->orderBy('totalscore')
+			->orderBy('totalscore','desc')
 			->get();
 	}
 	
