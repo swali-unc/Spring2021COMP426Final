@@ -19,12 +19,16 @@ class Fighters {
 	private $majikes;
 	private $prins;
 	private $plaisted;
+	private $idlookupcache;
 	
 	public function GetFights() {
 		return $this->data;
 	}
 	
 	public function GetFight( $id ) {
+		if( isset( $this->idlookupcache[$id] ) )
+			return $this->idlookupcache[$id];
+		
 		foreach( $this->data as $fight ) {
 			if( $fight['id'] == $id )
 				return $fight;
@@ -112,6 +116,16 @@ class Fighters {
 		
 		$this->data = [
 			$this->kmp, $this->jack, $this->porter, $this->majikes, $this->prins, $this->plaisted,
+		];
+		
+		$this->idlookupcache = [
+			0 => null,
+			$this->kmp['id'] => $this->kmp,
+			$this->porter['id'] => $this->porter,
+			$this->majikes['id'] => $this->majikes,
+			$this->prins['id'] => $this->prins,
+			$this->jack['id'] => $this->jack,
+			$this->plaisted['id'] => $this->plaisted,
 		];
 	}
 	
