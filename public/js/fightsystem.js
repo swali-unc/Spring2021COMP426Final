@@ -24,7 +24,7 @@ $( () => {
 });
 
 function CreateBoard() {
-	let gs = window.apiInst.getStatus().data;
+	let gs = window.apiInst.getStatus();
 	gs.then( (response) => {
 		CheckProgress( response.data );
 	});
