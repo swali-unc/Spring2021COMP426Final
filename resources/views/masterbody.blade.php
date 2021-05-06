@@ -28,6 +28,7 @@
 		@if($IsLoggedIn)
 		<td class="center centertext"><a href="/logout">Logout</a></td>
 		<td class="center centertext"><a href="/play">Play</a></td></td>
+		<td class="center centertext"><a href="/myscore">My Scores</a></td></td>
 		@else
 		<td class="center centertext"><a href="/login">Login</a></td>
 		<td class="center centertext"><a href="/register">Register</a></td>

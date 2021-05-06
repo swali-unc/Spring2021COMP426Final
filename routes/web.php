@@ -29,3 +29,8 @@ Route::get('/play/create/{fightid}', 'PlayController@CreateFight');
 Route::get('/play/move/{mvindex}', 'PlayController@Move');
 Route::get('/play/status', 'PlayController@Status');
 Route::get('/play/finish', 'PlayController@FinishGame');
+
+Route::get('/myscore', 'ScoreController@MyScores');
+Route::get('/score', 'ScoreController@HighScores');
+Route::get('/score/user/{userid}', 'ScoreController@UserScores');
+Route::get('/score/fight/{fightid}', 'ScoreController@FightScores');
