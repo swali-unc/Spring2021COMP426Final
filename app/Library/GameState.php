@@ -22,13 +22,30 @@ class GameState {
 		return $this->gamerow;
 	}
 	
-	public function MakeMove( $index, $value ) {
+	public function MakeMove( $index, $value, $gameid = null ) {
+		if( $gameid === null ) $gameid = $this->gameid;
 		if( !$this->IsValidIndex( $index ) ) return false;
 		if( !$this->IsValidValue( $value ) ) return false;
 		DB::table('games')
-			->where('id',$this->gameid)
+			->where('id',$gameid)
 			->update([$index => $value]);
 		return true;
+	}
+	
+	public function MakeAIMove( $gameid = null ) {
+		if( $gameid === null ) $gameid = $this->gameid;
+		$freeIndices = [];
+		foreach( $this->indexes as $idx ) {
+			if( $this->gamerow->$idx == 0 )
+				$freeIndices[] = $idx;
+		}
+		
+		$numMoves = count( $freeIndices );
+		if( $numMoves === 0 )
+			return false;
+		
+		$moveIdx = mt_rand( 0, $numMoves - 1 );
+		return $this->MakeMove( $freeIndices[$moveIdx], -1 );
 	}
 	
 	public function IsMoveValid( $index ) {
@@ -97,12 +114,21 @@ class GameState {
 	
 	public function CreateGame( $fightid ) {
 		if( $this->IsInGame() ) return false;
-		DB::table('games')
-			->insert([
+		$id = DB::table('games')
+			->insertGetId([
 				'userid' => $this->playerid,
 				'fightid' => $fightid
 			]);
-		return true;
+		$this->gameid = $id;
+		$this->fightid = $fightid;
+		$this->winner = 0;
+		$this->gamerow = new stdClass();
+		$this->gamerow->id = $id;
+		$this->gamerow->fightid = $fightid;
+		$this->gamerow->userid = $this->playerid;
+		foreach( $this->indexes as $idx )
+			$this->gamerow->$idx = 0;
+		return $id;
 	}
 	
 	private function IsValidIndex( $index ) {
