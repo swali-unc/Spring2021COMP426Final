@@ -30,6 +30,7 @@ class GameState {
 			->where('id',$gameid)
 			->update([$index => $value]);
 		$this->gamerow->$index = $value;
+		$this->IsGameCompleted();
 		return true;
 	}
 	
