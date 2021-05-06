@@ -24,6 +24,15 @@ class Fighters {
 		return $this->data;
 	}
 	
+	public function GetFight( $id ) {
+		foreach( $this->data as $fight ) {
+			if( $fight['id'] == $id )
+				return $fight;
+		}
+		
+		return null;
+	}
+	
 	public function __construct() {
 		$this->kmp = [
 			'id' => 1,
