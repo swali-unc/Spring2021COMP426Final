@@ -203,7 +203,6 @@ html, body {
 }
 
 .row {
-	height: 200px;
 	width: 100%;
 	margin-bottom: 10px;
 	padding: 10px;
@@ -237,8 +236,9 @@ html, body {
 }
 
 .fighterimg {
-	width: 128px;
-	height: 192px;
+	width: 33%;
+	border-radius: 10%;
+	padding: 10px;
 }
 
 .loader {
