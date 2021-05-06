@@ -145,10 +145,6 @@ class GameState {
 		return $this->fightid;
 	}
 	
-	public function GetGameRow() {
-		return $this->gamerow;
-	}
-	
 	public function __construct( $playerid = -1 ) {
 		if( $playerid == -1 ) {
 			$playerid = SessionAuth::Instance()->GetUserid();
