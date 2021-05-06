@@ -22,7 +22,7 @@
 	</tr>
 </table>
 @endif
-<table class="maxwidth center centertext">
+<table class="maxwidth center centertext evenwidth">
 	<tr>
 		<td class="center centertext"><a href="/">Home</a></td>
 		@if($IsLoggedIn)
