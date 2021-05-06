@@ -15,7 +15,7 @@
 			@foreach( $scores as $score )
 			<tr>
 				<td class="centertext">#{{ $loop->index+1 }}</td>
-				<td class="centertext">{{ $score->username }}</td>
+				<td class="centertext"><a href="/score/user/{{ $score->userid }}">{{ $score->username }}</a></td>
 				<td class="centertext">{{ $score->totalscore }}</td>
 			</tr>
 			@endforeach
