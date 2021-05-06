@@ -85,7 +85,7 @@ class Fighters {
 			'id' => 6,
 			'name' => 'Mecha-Plaisted',
 			'logo' => '/img/plaisted.png',
-			'taunt' => [
+			'taunts' => [
 				'MECHA PLAISTED ONLINE: PART MAN, PART FINITE AUTOMATA, FULL KICK-YOUR-ASS',
 				'LOADING CFG G=({S,YOU,ME,e,i,l,n,o,s,w},{e,i,l,n,o,s,w},{YOU-&gt; lose, ME-&gt; win, S-&gt; YOU, S-&gt; ME}, S)',
 				'YOU WINNING IS NOT A REGULAR LANGUAGE'
