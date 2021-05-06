@@ -18,7 +18,7 @@ $( () => {
 		'bm': false
 	};
 	window.ClickGrid = ClickGrid;
-	window.inQuery = false;
+	window.inQuery = true;
 	
 	CreateBoard();
 });
@@ -29,10 +29,10 @@ function CreateBoard() {
 }
 
 function CheckProgress( gs ) {
-	if( !gs.inprogress ) {
-		if( gs.won )
+	if( gs.inprogress == false ) {
+		if( gs.won == true )
 			$('#statusmsg').text('Congrats, you won!');
-		else if( gs.lost )
+		else if( gs.lost == true )
 			$('#statusmsg').text('You lost!');
 		else
 			$('#statusmsg').text('Draw!');
@@ -49,6 +49,10 @@ function CheckProgress( gs ) {
 	updategrid( 'bl', gs.gamestate.bl );
 	updategrid( 'bm', gs.gamestate.bm );
 	updategrid( 'br', gs.gamestate.br );
+	
+	$('#quote').text( gs.quote );
+	
+	window.inQuery = false;
 }
 
 function updategrid( elementid, data ) {
@@ -79,8 +83,6 @@ export function ClickGrid( index ) {
 	
 	let newgs = window.apiInst.move( index ).data;
 	CheckProgress( newgs );
-	
-	window.inQuery = false;
 }
 
 function CatchAPIError( errStr ) {
