@@ -15,6 +15,32 @@ class ScoreSystem {
 			]);
 	}
 	
+	public function GetUserScores( $userid ) {
+		return DB::table('scores')
+			->where('userid',$userid)
+			->orderBy('createdate')
+			->get();
+	}
+	
+	public function GetHighScores() {
+		return DB::table('scores')
+			->join('users','users.id','=','scores.userid')
+			->select('users.username','SUM(scores.score) as totalscore')
+			->groupBy('userid')
+			->orderBy('totalscore')
+			->get();
+	}
+	
+	public function GetFightScores( $fightid ) {
+		return DB::table('scores')
+			->join('users','users.id','=','scores.userid')
+			->where('scores.fightid',$fightid)
+			->select('users.username','SUM(scores.score) as totalscore')
+			->groupBy('userid')
+			->orderBy('totalscore')
+			->get();
+	}
+	
 	public function __construct() {
 		
 	}
