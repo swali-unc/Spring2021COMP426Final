@@ -104,7 +104,7 @@
     max-width: 100%;
 }
 
-input[type="submit"], input[type="button"], button[type="submit"]:not(.mult_submit), input[type="reset"], input[name="submit_reset"], input.button {
+button, input[type="submit"], input[type="button"], button[type="submit"]:not(.mult_submit), input[type="reset"], input[name="submit_reset"], input.button {
     font-weight: bold !important;
     margin: 6px 14px;
     border: 1px solid #aaa;
