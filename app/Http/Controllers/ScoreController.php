@@ -24,7 +24,11 @@ class ScoreController extends Controller {
 	
 	public function UserScores( Request $request, $userid ) {
 		$scores = $this->scoresystem->GetUserScores( $userid );
-		return view('userscore',['scores'=>$scores,'personname'=>$this->auth->GetUsername($userid)]);
+		return view('userscore',[
+			'scores'=>$scores,
+			'personname'=>$this->auth->GetUsername($userid),
+			'fs'=>$this->fighters,	
+		]);
 	}
 	
 	public function HighScores( Request $request ) {

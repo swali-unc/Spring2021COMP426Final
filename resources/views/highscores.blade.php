@@ -14,9 +14,9 @@
 			</tr>
 			@foreach( $scores as $score )
 			<tr>
-				<td>{{ $loop->index+1 }}</td>
-				<td>{{ $score->username }}</td>
-				<td>{{ $score->totalscore }}</td>
+				<td class="centertext">#{{ $loop->index+1 }}</td>
+				<td class="centertext">{{ $score->username }}</td>
+				<td class="centertext">{{ $score->totalscore }}</td>
 			</tr>
 			@endforeach
 		</table>
