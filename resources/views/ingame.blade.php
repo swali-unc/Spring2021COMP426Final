@@ -32,9 +32,9 @@
 	</table>
 </fieldset>
 <fieldset class="fsfooter">
-	<img src="{{ $fight['logo'] }}" class="floatleft fighterimg" />
+	<img src="{{ $fighter['logo'] }}" class="floatleft fighterimg" />
 	<p id="quote" class="fighterquote">
-		{!! $fight['taunts'][mt_rand(0,count($fight['taunts'])-1)] !!}
+		{!! $fighter['taunts'][mt_rand(0,count($fighter['taunts'])-1)] !!}
 	</p>
 </fieldset>
 @endsection
