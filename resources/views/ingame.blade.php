@@ -16,13 +16,13 @@
 	<table>
 		<tr>
 			<td class="borderright borderbottom"></td>
-			<td class="borderleft borderright borderbottom></td>
+			<td class="borderleft borderright borderbottom"></td>
 			<td class="borderleft borderbottom"></td>
 		</tr>
 		<tr>
 			<td class="bordertop borderright borderbottom"></td>
-			<td class="bordertop borderbottom borderleft borderright></td>
-			<td class="borderleft bordertop borderbottom></td>
+			<td class="bordertop borderbottom borderleft borderright"></td>
+			<td class="borderleft bordertop borderbottom"></td>
 		</tr>
 		<tr>
 			<td class="bordertop borderright"></td>
