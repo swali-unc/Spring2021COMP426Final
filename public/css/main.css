@@ -224,6 +224,23 @@ html, body {
 	font-size: 18px;
 }
 
+.br10 {
+	border-radius: 10%;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+.fighterimg {
+	width: 128px;
+	height: 192px;
+}
+
 .loader {
     border: 5px solid #f3f3f3;
     border-radius: 50%;
