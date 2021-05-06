@@ -55,7 +55,7 @@ class PlayController extends Controller {
 	
 		$result = $gs->MakeMove( $mvindex, 1 );
 		if( $result === false ) {
-			return json_encode([
+			return response()->json([
 				'error' => true,
 			]);
 		}
@@ -73,7 +73,7 @@ class PlayController extends Controller {
 			return redirect('/login')->with('errormsg','Please login to play');
 		$gs = new GameState();
 		
-		return json_encode([
+		return response()->json([
 			'inprogress' => $gs->IsInProgress(),
 			'won' => $gs->IsWon(),
 			'lost' => $gs->IsLost(),
@@ -90,7 +90,7 @@ class PlayController extends Controller {
 		if( !$this->auth->IsLoggedIn() )
 			return redirect('/login')->with('errormsg','Please login to play');
 		$gs = new GameState();
-		return json_encode(['finish'=>$gs->CompleteGame()]);
+		return response()->json(['finish'=>$gs->CompleteGame()]);
 	}
 	
 	public function __construct() {
