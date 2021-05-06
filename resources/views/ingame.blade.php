@@ -19,9 +19,9 @@
 @section('PageContents')
 <div class="center width80">
 <fieldset class="fsheader">
-	<table>
+	<table class="maxwidth">
 		<tr>
-		<td>
+		<td class="width50">
 			<table class="gridtable">
 				<tr>
 					<td id="tl" class="gridelement borderright borderbottom"></td>
@@ -40,7 +40,7 @@
 				</tr>
 			</table>
 		</td>
-		<td>
+		<td class="width50">
 			<div id="errors">
 			</div>
 			<br />

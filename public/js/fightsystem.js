@@ -7,15 +7,15 @@ $( () => {
 	window.FinishGame = FinishGame;
 	window.indices = ['tl','tr','tm','cl','cm','cr','bl','bm','br'];
 	window.gridclickable = {
-		'tl' => false,
-		'tr' => false,
-		'tm' => false,
-		'cl' => false,
-		'cr' => false,
-		'cm' => false,
-		'bl' => false,
-		'br' => false,
-		'bm' => false
+		'tl': false,
+		'tr': false,
+		'tm': false,
+		'cl': false,
+		'cr': false,
+		'cm': false,
+		'bl': false,
+		'br': false,
+		'bm': false
 	};
 	window.ClickGrid = ClickGrid;
 	window.inQuery = false;
