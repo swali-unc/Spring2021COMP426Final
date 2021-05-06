@@ -51,7 +51,7 @@ function CheckProgress( gs ) {
 	updategrid( 'bm', gs.gamestate.bm );
 	updategrid( 'br', gs.gamestate.br );
 	
-	$('#quote').text( gs.quote );
+	$('#quote').html( gs.quote );
 	
 	window.inQuery = false;
 }
