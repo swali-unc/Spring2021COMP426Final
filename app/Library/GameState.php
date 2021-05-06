@@ -86,6 +86,20 @@ class GameState {
 			$this->winner = $this->gamerow->bl;
 			return true;
 		}
+		//col
+		if( $this->gamerow->tl == $this->gamerow->cl && $this->gamerow->cl == $this->gamerow->bl && $this->gamerow->cl != 0 ) {
+			$this->winner = $this->gamerow->tl;
+			return true;
+		}
+		if( $this->gamerow->tm == $this->gamerow->cm && $this->gamerow->cm == $this->gamerow->bm && $this->gamerow->bm != 0 ) {
+			$this->winner = $this->gamerow->cm;
+			return true;
+		}
+		if( $this->gamerow->tr == $this->gamerow->cr && $this->gamerow->cr == $this->gamerow->br && $this->gamerow->br != 0 ) {
+			$this->winner = $this->gamerow->br;
+			return true;
+		}
+		//diag
 		if( $this->gamerow->tl == $this->gamerow->cm && $this->gamerow->cm == $this->gamerow->br && $this->gamerow->br != 0 ) {
 			$this->winner = $this->gamerow->br;
 			return true;
