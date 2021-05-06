@@ -25,7 +25,9 @@ $( () => {
 
 function CreateBoard() {
 	let gs = window.apiInst.getStatus().data;
-	CheckProgress( gs );
+	gs.then( (response) => {
+		CheckProgress( response.data );
+	});
 }
 
 function CheckProgress( gs ) {
@@ -69,8 +71,9 @@ function updategrid( elementid, data ) {
 }
 
 export function FinishGame() {
-	window.apiInst.finish();
-	window.location.href = '/play';
+	window.apiInst.finish().then( (response) => {
+		window.location.href = '/play';
+	});
 }
 
 export function ClickGrid( index ) {
@@ -81,8 +84,8 @@ export function ClickGrid( index ) {
 	
 	$(`#${index}`).html('<div id="loader"></div>');
 	
-	let newgs = window.apiInst.move( index ).data;
-	CheckProgress( newgs );
+	let newgs = window.apiInst.move( index )
+		.then( (response) => CheckProgress( response.data ) );
 }
 
 function CatchAPIError( errStr ) {
