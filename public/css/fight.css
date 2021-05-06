@@ -1,0 +1,15 @@
+.borderright {
+	border-right: 2px solid black;
+}
+
+.borderleft {
+	border-left: 2px solid black;
+}
+
+.bordertop {
+	border-top: 2px solid black;
+}
+
+.borderbottom {
+	border-bottom: 2px solid black;
+}

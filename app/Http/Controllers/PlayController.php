@@ -18,9 +18,8 @@ class PlayController extends Controller {
 			return redirect('/login')->with('errormsg','Please login to play');
 		$gs = new GameState();
 		
-		if( $gs->IsInGame() ) {
+		if( $gs->IsInGame() )
 			return view('ingame',['gs'=>$gs]);
-		}
 		
 		return view('fightselect',['fighters'=>$this->fighters->GetFights()]);
 	}
@@ -55,7 +54,16 @@ class PlayController extends Controller {
 			return redirect('/play');
 	
 		$result = $gs->MakeMove( $mvindex, 1 );
-		$gs->IsGameCompleted();
+		if( $result === false ) {
+			return json_encode([
+				'error' => true,
+			]);
+		}
+		
+		if( $gs->IsGameCompleted() === false ) {
+			$gs->MakeAIMove();
+			$gs->IsGameCompleted();
+		}
 		
 		return $this->Status( $request );
 	}
@@ -72,7 +80,8 @@ class PlayController extends Controller {
 			'draw' => $gs->IsDraw(),
 			'fightid' => $gs->GetFight(),
 			'fight' => $this->fighters->GetFight( $gs->GetFight() ),
-			'gamestate' => $gs->GetGameRow()
+			'gamestate' => $gs->GetGameRow(),
+			'error' => false,
 		]);
 	}
 	
