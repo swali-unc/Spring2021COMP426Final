@@ -205,6 +205,10 @@ html, body {
 	height: 25vh;
 }
 
+.vh23 {
+	height: 23vh;
+}
+
 .row {
 	width: 100%;
 	margin-bottom: 10px;
