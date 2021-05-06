@@ -13,3 +13,12 @@
 .borderbottom {
 	border-bottom: 2px solid black;
 }
+
+.gridtable {
+	border-collapse: collapse;
+	width: 50%;
+}
+
+.gridelement {
+	height: 10vh;
+}

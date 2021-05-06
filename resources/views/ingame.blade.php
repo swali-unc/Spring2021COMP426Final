@@ -13,25 +13,28 @@
 
 @section('PageContents')
 <fieldset class="fsheader">
-	<table>
+	<table class="gridtable">
 		<tr>
-			<td class="borderright borderbottom"></td>
-			<td class="borderleft borderright borderbottom"></td>
-			<td class="borderleft borderbottom"></td>
+			<td class="gridelement borderright borderbottom"></td>
+			<td class="gridelement borderleft borderright borderbottom"></td>
+			<td class="gridelement borderleft borderbottom"></td>
 		</tr>
 		<tr>
-			<td class="bordertop borderright borderbottom"></td>
-			<td class="bordertop borderbottom borderleft borderright"></td>
-			<td class="borderleft bordertop borderbottom"></td>
+			<td class="gridelement bordertop borderright borderbottom"></td>
+			<td class="gridelement bordertop borderbottom borderleft borderright"></td>
+			<td class="gridelement borderleft bordertop borderbottom"></td>
 		</tr>
 		<tr>
-			<td class="bordertop borderright"></td>
-			<td class="bordertop borderleft borderright"></td>
-			<td class="borderleft bordertop"></td>
+			<td class="gridelement bordertop borderright"></td>
+			<td class="gridelement bordertop borderleft borderright"></td>
+			<td class="gridelement borderleft bordertop"></td>
 		</tr>
 	</table>
 </fieldset>
 <fieldset class="fsfooter">
-	
+	<img src="{{ $fight['logo'] }}" class="floatleft fighterimg" />
+	<p id="quote" class="fighterquote">
+		{!! $fight['taunts'][mt_rand(0,count($fight['taunts'])-1)] !!}
+	</p>
 </fieldset>
 @endsection

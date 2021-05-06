@@ -19,7 +19,7 @@ class PlayController extends Controller {
 		$gs = new GameState();
 		
 		if( $gs->IsInGame() )
-			return view('ingame',['gs'=>$gs]);
+			return view('ingame',['gs'=>$gs,'fighter'=>$this->fighters->GetFight($gs->GetFight())]);
 		
 		return view('fightselect',['fighters'=>$this->fighters->GetFights()]);
 	}
@@ -82,6 +82,7 @@ class PlayController extends Controller {
 			'fight' => $this->fighters->GetFight( $gs->GetFight() ),
 			'gamestate' => $gs->GetGameRow(),
 			'error' => false,
+			'quote' => $this->fighters->GetRandomQuote( $gs->GetFight() ),
 		]);
 	}
 	

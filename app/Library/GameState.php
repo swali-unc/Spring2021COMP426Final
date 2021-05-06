@@ -124,7 +124,7 @@ class GameState {
 		$this->gameid = $id;
 		$this->fightid = $fightid;
 		$this->winner = 0;
-		$this->gamerow = new stdClass();
+		$this->gamerow = new \stdClass();
 		$this->gamerow->id = $id;
 		$this->gamerow->fightid = $fightid;
 		$this->gamerow->userid = $this->playerid;

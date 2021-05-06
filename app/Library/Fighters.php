@@ -33,6 +33,15 @@ class Fighters {
 		return null;
 	}
 	
+	public function GetRandomQuote( $id ) {
+		$fighter = $this->GetFight( $id );
+		if( $fighter === null ) return null;
+		
+		$numquotes = count( $fighter['taunts'] );
+		$quoteid = mt_rand(0, $numquotes - 1);
+		return $fighter['taunts'][$quoteid];
+	}
+	
 	public function __construct() {
 		$this->kmp = [
 			'id' => 1,

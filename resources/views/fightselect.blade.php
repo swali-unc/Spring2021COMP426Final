@@ -17,7 +17,7 @@
 					</p>
 				</fieldset>
 				<fieldset class="fsfooter">
-					<button>Challenge</button>
+					<button onclick="location.href='/play/create/{{ $fight['id'] }}';">Challenge</button>
 				</fieldset>
 			</div>
 		@if( $loop->index % 3 == 2 || $loop->last )
