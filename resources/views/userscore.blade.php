@@ -18,7 +18,11 @@ Scores for {{ $personname }}
 			@foreach( $scores as $score )
 			<tr>
 				<td class="centertext">{{ date('Y-m-d H:i:s', strtotime( $score->createdate ) ) }}</td>
-				<td class="centertext">{{ ($fs->GetFight( $score->fightid ))['name'] }}</td>
+				<td class="centertext">
+					<a href="/score/fight/{{ $score->fightid }}">
+						{{ ($fs->GetFight( $score->fightid ))['name'] }}
+					</a>
+				</td>
 				<td class="centertext">{{ $score->score }}</td>
 				<td class="centertext">
 				@if( $score->score == 0 )
