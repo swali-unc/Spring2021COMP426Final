@@ -4,27 +4,24 @@
 
 @section('PageContents')
 <div class="container">
-	@for( $i = 0; $i < count($fighters); ++$i )
-	@if( $i % 3 == 0 )
-	<div class="row">
-	@endif
-		<div class="col3">
-			<fieldset class="fsheader">
-				<legend>{!! $fighters[i]['name'] !!}</legend>
-				@php
-					$qi = mt_rand(0,count($fighters[i]['taunts'])-1);
-				@endphp
-				<p class="fighterquote">
-					{!! $fighters[i]['taunts'][$qi] !!}
-				</p>
-			</fieldset>
-			<fieldset class="fsfooter">
-				<button>Challenge</button>
-			</fieldset>
+	@foreach( $fighters as $fight )
+		@if( $loop->index % 3 == 0 )
+		<div class="row">
+		@endif
+			<div class="col3">
+				<fieldset class="fsheader">
+					<legend>{!! $fight['name'] !!}</legend>
+					<p class="fighterquote">
+						{!! $fight['taunts'][mt_rand(0,count($fight['taunts'])-1)] !!}
+					</p>
+				</fieldset>
+				<fieldset class="fsfooter">
+					<button>Challenge</button>
+				</fieldset>
+			</div>
+		@if( $loop->index % 3 == 2 || $loop->last )
 		</div>
-	@if( $i % 3 == 0 )
-	</div>
-	@endif
-	@endfor
+		@endif
+	@endforeach
 </div>
 @endsection
