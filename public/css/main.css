@@ -197,9 +197,12 @@ html, body {
 
 .container {
 	width: 100%;
-	max-width: 500px;
 	margin: 0 auto;
 	padding: 10px;
+}
+
+.vh25 {
+	height: 25vh;
 }
 
 .row {
@@ -212,7 +215,6 @@ html, body {
 	width: 32%;
 	float: left;
 	height: 100%;
-	margin-right: 2%;
 }
 
 .col3:last-child {
@@ -239,6 +241,7 @@ html, body {
 	width: 33%;
 	border-radius: 10%;
 	padding: 10px;
+	max-width: 96px;
 }
 
 .loader {

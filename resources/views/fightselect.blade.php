@@ -9,7 +9,7 @@
 		<div class="row">
 		@endif
 			<div class="col3">
-				<fieldset class="fsheader">
+				<fieldset class="fsheader vh25">
 					<legend>{!! $fight['name'] !!}</legend>
 					<img src="{{ $fight['logo'] }}" class="floatleft fighterimg" />
 					<p class="fighterquote">
