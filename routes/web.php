@@ -24,4 +24,6 @@ Route::post('/register', 'LoginController@CreateUser');
 Route::post('/login', 'LoginController@AttemptLogin');
 
 Route::get('/play', 'PlayController@Home');
-
+Route::get('/play/create/{fightid}', 'PlayController@CreateFight');
+Route::get('/play/move/{mvindex}', 'PlayController@Move');
+Route::get('/play/status', 'PlayController@Status');
