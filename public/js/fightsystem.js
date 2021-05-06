@@ -59,10 +59,10 @@ function CheckProgress( gs ) {
 
 function updategrid( elementid, data ) {
 	if( data == -1 ) {
-		$(`#${elementid}`).html('<div id="gridentry">X</div>');
+		$(`#${elementid}`).html('<div class="gridentry">X</div>');
 		window.gridclickable[elementid] = false;
 	} else if( data == 1 ) {
-		$(`#${elementid}`).html('<div id="gridentry">O</div>');
+		$(`#${elementid}`).html('<div class="gridentry">O</div>');
 		window.gridclickable[elementid] = false;
 	} else {
 		$(`#${elementid}`).html('');

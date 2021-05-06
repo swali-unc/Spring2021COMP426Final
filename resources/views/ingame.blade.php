@@ -24,23 +24,25 @@
 		<td class="width50">
 			<table class="gridtable">
 				<tr>
-					<td id="tl" class="gridelement borderright borderbottom"></td>
-					<td id="tm" class="gridelement borderleft borderright borderbottom"></td>
-					<td id="tr" class="gridelement borderleft borderbottom"></td>
+					<td id="tl" class="gridelement borderright borderbottom" onclick="window.ClickGrid('tl');"></td>
+					<td id="tm" class="gridelement borderleft borderright borderbottom" onclick="window.ClickGrid('tm');"></td>
+					<td id="tr" class="gridelement borderleft borderbottom" onclick="window.ClickGrid('tr');"></td>
 				</tr>
 				<tr>
-					<td id="cl" class="gridelement bordertop borderright borderbottom"></td>
-					<td id="cm" class="gridelement bordertop borderbottom borderleft borderright"></td>
-					<td id="cr" class="gridelement borderleft bordertop borderbottom"></td>
+					<td id="cl" class="gridelement bordertop borderright borderbottom" onclick="window.ClickGrid('cl');"></td>
+					<td id="cm" class="gridelement bordertop borderbottom borderleft borderright" onclick="window.ClickGrid('cm');"></td>
+					<td id="cr" class="gridelement borderleft bordertop borderbottom" onclick="window.ClickGrid('cr');"></td>
 				</tr>
 				<tr>
-					<td id="bl" class="gridelement bordertop borderright"></td>
-					<td id="bm" class="gridelement bordertop borderleft borderright"></td>
-					<td id="br" class="gridelement borderleft bordertop"></td>
+					<td id="bl" class="gridelement bordertop borderright" onclick="window.ClickGrid('bl');"></td>
+					<td id="bm" class="gridelement bordertop borderleft borderright" onclick="window.ClickGrid('bm');"></td>
+					<td id="br" class="gridelement borderleft bordertop" onclick="window.ClickGrid('br');"></td>
 				</tr>
 			</table>
 		</td>
 		<td class="width50">
+			Notes: You are always O, the hero you are fighting is always X.
+			<br />
 			<div id="errors">
 			</div>
 			<br />
