@@ -3,6 +3,7 @@
 @section('PageTitle','Login')
 
 @section('PageContents')
+<div class="width80 center">
 <fieldset class="fsheader">
 	<legend>Login</legend>
 	Login here.<br />
@@ -18,4 +19,5 @@
 </fieldset>
 <fieldset class="fsfooter">
 </fieldset>
+</div>
 @endsection

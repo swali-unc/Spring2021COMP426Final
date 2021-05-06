@@ -3,6 +3,7 @@
 @section('PageTitle','New Account Registration')
 
 @section('PageContents')
+<div class="width80 center">
 <fieldset class="fsheader">
 	<legend>Register</legend>
 	Create your user account here.<br />
@@ -19,4 +20,5 @@
 </fieldset>
 <fieldset class="fsfooter">
 </fieldset>
+</div>
 @endsection
