@@ -4,6 +4,7 @@
 
 @section('PageContents')
 <fieldset class="fsheader">
+	<legend>Register</legend>
 	Create your user account here.<br />
 	Note usernames must be at least 3 letters long, and alphanumeric.<br />
 	
