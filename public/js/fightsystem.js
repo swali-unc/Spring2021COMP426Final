@@ -39,7 +39,6 @@ function CheckProgress( gs ) {
 		else
 			$('#statusmsg').text('Draw!');
 		$('#statusmsg').append('<br /><button onclick="window.FinishGame();">Play Again</button>');
-		return;
 	}
 	
 	updategrid( 'tl', gs.gamestate.tl );
