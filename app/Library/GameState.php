@@ -29,6 +29,7 @@ class GameState {
 		DB::table('games')
 			->where('id',$gameid)
 			->update([$index => $value]);
+		$this->gamerow->$index = $value;
 		return true;
 	}
 	
