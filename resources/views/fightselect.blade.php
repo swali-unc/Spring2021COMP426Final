@@ -12,7 +12,7 @@
 				<fieldset class="fsheader vh23">
 					<legend>{!! $fight['name'] !!}</legend>
 					<img src="{{ $fight['logo'] }}" class="floatleft fighterimg" />
-					<p class="fighterquote">
+					<p class="fighterquote lefttext">
 						{!! $fight['taunts'][mt_rand(0,count($fight['taunts'])-1)] !!}
 					</p>
 				</fieldset>

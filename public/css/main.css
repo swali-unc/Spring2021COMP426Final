@@ -18,6 +18,14 @@
 	text-align: center;
 }
 
+.lefttext {
+	text-align: left;
+}
+
+.righttext {
+	text-align: right;
+}
+
 .evenwidth {
 	table-layout: fixed;
 }
