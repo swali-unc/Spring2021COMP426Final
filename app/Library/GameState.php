@@ -105,12 +105,13 @@ class GameState {
 	
 	public function CompleteGame() {
 		if( $this->winner == 0 ) return false;
-		$score = $this->winner == -1 ? 0 : mt_rand(10,50);
+		$score = $this->winner == -1 ? 0 : ($this->winner == 2 ? mt_rand(1,9) : mt_rand(10,50));
 		ScoreSystem::Instance()->RecordGame( $this->playerid, $this->fightid, $score );
 		
 		DB::table('games')
 			->where('id',$this->gameid)
 			->delete();
+		return true;
 	}
 	
 	public function CreateGame( $fightid ) {
@@ -138,6 +139,14 @@ class GameState {
 	
 	private function IsValidValue( $value ) {
 		return in_array( $value, [1,0,-1], true );
+	}
+	
+	public function GetFight() {
+		return $this->fightid;
+	}
+	
+	public function GetGameRow() {
+		return $this->gamerow;
 	}
 	
 	public function __construct( $playerid = -1 ) {
