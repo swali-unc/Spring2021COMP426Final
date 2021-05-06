@@ -98,6 +98,17 @@ class SessionAuth {
 		return $this->username;
 	}
 	
+	public function GetUsername( $userid ) {
+		if( $this->userid == $userid )
+			return $this->username;
+		$rows = DB::table('users')
+			->select('username')
+			->where('id',$userid)
+			->limit(1)
+			->get();
+		return count($rows) == 0 ? null : $rows[0]->username;
+	}
+	
 	public function GetUserid() {
 		return $this->userid;
 	}
