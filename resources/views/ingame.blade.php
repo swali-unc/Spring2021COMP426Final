@@ -17,22 +17,36 @@
 @endpush
 
 @section('PageContents')
+<div class="center width80">
 <fieldset class="fsheader">
-	<table class="gridtable">
+	<table>
 		<tr>
-			<td id="tl" class="gridelement borderright borderbottom"></td>
-			<td id="tm" class="gridelement borderleft borderright borderbottom"></td>
-			<td id="tr" class="gridelement borderleft borderbottom"></td>
-		</tr>
-		<tr>
-			<td id="cl" class="gridelement bordertop borderright borderbottom"></td>
-			<td id="cm" class="gridelement bordertop borderbottom borderleft borderright"></td>
-			<td id="cr" class="gridelement borderleft bordertop borderbottom"></td>
-		</tr>
-		<tr>
-			<td id="bl" class="gridelement bordertop borderright"></td>
-			<td id="bm" class="gridelement bordertop borderleft borderright"></td>
-			<td id="br" class="gridelement borderleft bordertop"></td>
+		<td>
+			<table class="gridtable">
+				<tr>
+					<td id="tl" class="gridelement borderright borderbottom"></td>
+					<td id="tm" class="gridelement borderleft borderright borderbottom"></td>
+					<td id="tr" class="gridelement borderleft borderbottom"></td>
+				</tr>
+				<tr>
+					<td id="cl" class="gridelement bordertop borderright borderbottom"></td>
+					<td id="cm" class="gridelement bordertop borderbottom borderleft borderright"></td>
+					<td id="cr" class="gridelement borderleft bordertop borderbottom"></td>
+				</tr>
+				<tr>
+					<td id="bl" class="gridelement bordertop borderright"></td>
+					<td id="bm" class="gridelement bordertop borderleft borderright"></td>
+					<td id="br" class="gridelement borderleft bordertop"></td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<div id="errors">
+			</div>
+			<br />
+			<div id="statusmsg">
+			</div>
+		</td>
 		</tr>
 	</table>
 </fieldset>
@@ -42,4 +56,5 @@
 		{!! $fighter['taunts'][mt_rand(0,count($fighter['taunts'])-1)] !!}
 	</p>
 </fieldset>
+</div>
 @endsection

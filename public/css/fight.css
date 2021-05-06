@@ -21,4 +21,14 @@
 
 .gridelement {
 	height: 10vh;
+	width: 30%;
+}
+
+.gridentry {
+	font-size: 36px;
+	text-align: center;
+}
+
+#errors {
+	display: none;
 }

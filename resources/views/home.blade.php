@@ -3,7 +3,7 @@
 @section('PageTitle','Home Page')
 
 @section('PageContents')
-<div class="width80">
+<div class="width80 center">
 <fieldset class="fsheader">
 	<legend>Welcome!</legend>
 	<p>Welcome to AI Tic-Tac-Toe, where you can challenge several AI, compete for a high score list, and participate in all things competitive tic-tac-toe.<br /></p>
