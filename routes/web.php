@@ -22,3 +22,6 @@ Route::get('/logout', 'LoginController@LogoutPage');
 Route::get('/register', 'LoginController@RegisterPage');
 Route::post('/register', 'LoginController@CreateUser');
 Route::post('/login', 'LoginController@AttemptLogin');
+
+Route::get('/play', 'PlayController@Home');
+
