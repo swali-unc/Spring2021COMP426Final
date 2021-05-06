@@ -25,7 +25,7 @@ class ScoreSystem {
 	public function GetHighScores() {
 		return DB::table('scores')
 			->join('users','users.id','=','scores.userid')
-			->select('users.username','SUM(scores.score) as totalscore')
+			->select('users.username',DB::raw('SUM(scores.score) as totalscore'))
 			->groupBy('userid')
 			->orderBy('totalscore')
 			->get();
@@ -35,7 +35,7 @@ class ScoreSystem {
 		return DB::table('scores')
 			->join('users','users.id','=','scores.userid')
 			->where('scores.fightid',$fightid)
-			->select('users.username','SUM(scores.score) as totalscore')
+			->select('users.username',DB::raw('SUM(scores.score) as totalscore'))
 			->groupBy('userid')
 			->orderBy('totalscore')
 			->get();
