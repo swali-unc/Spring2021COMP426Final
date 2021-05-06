@@ -19,7 +19,7 @@ class ScoreController extends Controller {
 			return redirect('/login')->with('errormsg','Please login to view your own scores');
 		$userid = $this->auth->GetUserid();
 		
-		return UserScores( $request, $userid );
+		return $this->UserScores( $request, $userid );
 	}
 	
 	public function UserScores( Request $request, $userid ) {
