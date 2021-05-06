@@ -23,7 +23,7 @@ class PlayController extends Controller {
 			return view('ingame',['gs'=>$gs]);
 		}
 		
-		return view('fightselect',['fighters'=>$this->fighters]);
+		return view('fightselect',['fighters'=>$this->fighters->GetFights()]);
 	}
 	
 	public function __construct() {
