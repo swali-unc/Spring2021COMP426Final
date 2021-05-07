@@ -7,13 +7,23 @@
 	<fieldset class="fsheader">
 		<legend>Find streams relevant to our game!</legend>
 		
+		<table class="maxwidth">
 		@foreach( $js->data as $s )
+		@if( $loop->index % 5 == 0 )
+		<tr>
+		@endif
+		<td>
 		<div class="stream">
 			<img src="{!! $s->thumbnail_url !!}" class="streamimg" />
 			<br />
 			Watch <a href="https://twitch.tv/{!! $s->broadcaster_login !!}">{{ $s->display_name }}</a>
 		</div>
+		</td>
+		@if( $loop->index % 5 == 4 || $loop->last )
+		</tr>
+		@endif
 		@endforeach
+		</table>
 	</fieldset>
 	<fieldset class="fsfooter">
 	</fieldset>
