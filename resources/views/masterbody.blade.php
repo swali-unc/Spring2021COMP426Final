@@ -33,7 +33,6 @@
 	<tr>
 		<td class="center centertext"><a href="/">Home</a></td>
 		@if($IsLoggedIn)
-		<td class="center centertext"><a href="/logout">Logout</a></td>
 		<td class="center centertext"><a href="/play">Play</a></td></td>
 		<td class="center centertext"><a href="/myscore">My Scores</a></td></td>
 		@else
@@ -41,8 +40,10 @@
 		<td class="center centertext"><a href="/register">Register</a></td>
 		@endif
 		<td class="center centertext"><a href="/score">High Scores</a></td>
+		<td class="center centertext"><a href="/streams">Streams</a></td>
 		@if($IsLoggedIn)
 		<td class="center centertext">Welcome {{ $username }}</td>
+		<td class="center centertext"><a href="/logout">Logout</a></td>
 		@endif
 	</tr>
 </table>
