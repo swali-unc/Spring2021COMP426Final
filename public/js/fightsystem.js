@@ -98,7 +98,7 @@ function CatchAPIError( errStr ) {
 
 function CatchTWError( errStr ) {
 	$('#tweetbtn').text('Error!');
-	$('#errors').html('Could not post to the twitter api, make sure you <a href="/comptwitterlogin">log in here</a>');
+	$('#errors').html('Could not post to the twitter api, make sure you <a href="/comptwitterlogin">log in here</a><br />' + errStr);
 	$('#errors').css('display','block');
 }
 
@@ -106,7 +106,21 @@ export function TweetForMe( str ) {
 	$('#tweetbtn').attr('disabled','disabled');
 	$('#tweetbtn').text('Posting..');
 	
-	window.twapi.createTweet( str ).then( (resp) => {
+	/*window.twapi.createTweet( str ).then( (resp) => {
 		$('#tweetbtn').text('Done!');
+	});*/
+	$.ajax({
+		url: 'https://comp426-1fa20.cs.unc.edu/a09/tweets',
+		type: 'POST',
+		data: {
+			'body': str
+		},
+		xhrFields: {
+			withCredentials: true,
+		},
+	}).then(() => {
+		$('#tweetbtn').text('Done!');
+	}).catch(() => {
+		CatchTWError('');
 	});
 }
