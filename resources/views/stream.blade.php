@@ -17,6 +17,10 @@
 			<img src="{!! $s->thumbnail_url !!}" class="streamimg" />
 			<br />
 			Watch <a href="https://twitch.tv/{!! $s->broadcaster_login !!}">{{ $s->display_name }}</a>
+			@if( $s->is_live )
+			<br />
+			<span class="alert">Live Now!</span>
+			@endif
 		</div>
 		</td>
 		@if( $loop->index % 5 == 4 || $loop->last )
