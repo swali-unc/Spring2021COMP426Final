@@ -34,3 +34,6 @@ Route::get('/myscore', 'ScoreController@MyScores');
 Route::get('/score', 'ScoreController@HighScores');
 Route::get('/score/user/{userid}', 'ScoreController@UserScores');
 Route::get('/score/fight/{fightid}', 'ScoreController@FightScores');
+
+Route::get('/search/suggest', 'SearchController@SearchHints');
+Route::post('/search','SearchController@SearchResults');
