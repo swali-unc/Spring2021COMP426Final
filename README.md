@@ -1,3 +1,36 @@
+# COMP 426 Tic-Tac-Toe AI Final Project
+Author: Syed Ali
+onyen: swali
+
+This is a project that uses laravel to organize a model-view-controller (and more) design pattern in web development. For more information on laravel, check the About Laravel section.
+
+This website is deployed to https://comp426.digital-haze.org/
+
+Any NPCs that may potentially be similar to UNC professors is entirely coincidental.
+
+Here are the points sought after:
+
+20 Points- Beginners Luck- Used Twitch API for finding relevant streamers to our website
+
+20 Points- Now we're cookin- Used COMP 426 class twitter API to share if people are playing
+
+30 Points- With great power comes... great complexity?- A username, hashed and salted password, and session token system is entirely in place using MySQL as the database back-end.
+
+30 Points- rEnder it- Tic-tac-toe is played using javascript api calls
+
+10 Points- Autocomp- Searching the high scores list will dynamically autocomplete usernames in the database to help search
+
+
+Total: 110
+
+Here are points that aren't fully attained, but hoping for partial credit:
+
+10 Points- Glutton for punishment- all of the css on this website is hand-made (although jquery-ui is installed, I ended up not using it to chase after this achievement), and it works well on mobile. The mobile client is not "top-notch," and works a lot better in landscape view than portrait, but it does work.
+
+Potential Total: 120
+
+## About Laravel
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -6,8 +39,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-
-## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -26,36 +57,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
