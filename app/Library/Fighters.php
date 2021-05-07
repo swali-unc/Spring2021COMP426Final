@@ -53,7 +53,7 @@ class Fighters {
 			'logo' => '/img/kmpcomic.png',
 			'taunts' => [
 				'Challenge me and you\'ll be caught in my web.. programming',
-				'YOU DARE APPROACH THE KUSH-MASTER PROFESSOR?',
+				'You dare approach the kush-master?',
 				'You\'ll need a lot of files and databases to keep up with me',
 			]
 		];
