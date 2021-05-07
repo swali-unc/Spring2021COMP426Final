@@ -81,7 +81,7 @@ export function ClickGrid( index ) {
 		return;
 	window.inQuery = true;
 	
-	$(`#${index}`).html('<div id="loader"></div>');
+	$(`#${index}`).html('<div class="loader"></div>');
 	
 	let newgs = window.apiInst.move( index )
 		.then( (response) => CheckProgress( response.data ) );
