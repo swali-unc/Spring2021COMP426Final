@@ -22,6 +22,13 @@
 	</tr>
 </table>
 @endif
+@if ( isset($errors) && count($errors) > 0)
+@foreach ($errors->all() as $error)
+<div class="maxwidth center centertext" style="margin-top: 20px; padding: 5px .7em; border-radius: 5px;">
+	{{ $error }}
+</div>
+@endforeach
+@endif
 <table class="maxwidth center centertext evenwidth">
 	<tr>
 		<td class="center centertext"><a href="/">Home</a></td>
