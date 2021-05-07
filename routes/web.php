@@ -41,3 +41,5 @@ Route::post('/search','SearchController@SearchResults');
 Route::get('/comptwitterlogin', function () {
 	return view('comptwitterlogin');
 });
+
+Route::get('/streams', 'TwitchController@ViewChess');
