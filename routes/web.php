@@ -37,3 +37,7 @@ Route::get('/score/fight/{fightid}', 'ScoreController@FightScores');
 
 Route::get('/search/suggest', 'SearchController@SearchHints');
 Route::post('/search','SearchController@SearchResults');
+
+Route::get('/comptwitterlogin', function () {
+	return view('comptwitterlogin');
+});

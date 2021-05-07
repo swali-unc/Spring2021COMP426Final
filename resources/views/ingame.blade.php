@@ -6,6 +6,7 @@
 <script src="/js/axios.min.js"></script>
 <script src="/js/fightapi.js" type='module'></script>
 <script src="/js/fightsystem.js" type='module'></script>
+<script src="/js/comptwitterapi.js" type='module'></script>
 @endpush
 
 @push('OnLoadJS')
@@ -41,8 +42,9 @@
 			</table>
 		</td>
 		<td class="width50">
-			Notes: You are always O, the hero you are fighting is always X.
+			Notes: You are always O, the hero you are fighting is always X.<br />
 			<br />
+			<button id="tweetbtn" onclick="window.TweetForMe('I\'m fighting {{ $fighter['name'] }} in a tic-tac-toe battle!');">Tweet about your fight!</button>
 			<div id="errors">
 			</div>
 			<br />
