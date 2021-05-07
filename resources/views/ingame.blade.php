@@ -44,12 +44,13 @@
 		<td class="width50">
 			Notes: You are always O, the hero you are fighting is always X.<br />
 			<br />
-			<button id="tweetbtn" onclick="window.TweetForMe('I\'m fighting {{ $fighter['name'] }} in a tic-tac-toe battle!');">Tweet about your fight!</button>
 			<div id="errors">
 			</div>
 			<br />
 			<div id="statusmsg">
 			</div>
+			<br />
+			<button id="tweetbtn" onclick="window.TweetForMe('I\'m fighting {{ $fighter['name'] }} in a tic-tac-toe battle!');">Tweet about your fight!</button>
 		</td>
 		</tr>
 	</table>
