@@ -24,7 +24,7 @@ class LoginController extends Controller {
 	
 	public function CreateUser( Request $request ) {
 		$this->validate( $request, [
-			'username' => 'required|alphanum|max:50|min:3',
+			'username' => 'required|alpha_num|max:50|min:3',
 			'password' => 'required|max:50|min:3',
 		]);
 		
@@ -43,7 +43,7 @@ class LoginController extends Controller {
 	
 	public function AttemptLogin( Request $request ) {
 		$this->validate( $request, [
-			'username' => 'required|alphanum',
+			'username' => 'required|alpha_num',
 			'password' => 'required',
 		]);
 		
